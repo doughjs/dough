@@ -1,28 +1,25 @@
 {
-  "name": "@dough/dough",
-  "description": "Fast & minimalist web framework for Bun",
-  "version": "1.0.0",
-  "contributors": [
-    "Masood Zafar <masxafar@gmail.com>",
-    "Rostyslav Rudnovskiy <ruddnovskiy@gmail.com>"
-  ],
-  "homepage": "https://github.com/doughjs/dough#readme",
-  "license": "MIT",
-  "keywords": [
-    "dough",
-    "framework",
-    "web",
-    "http",
-    "rest",
-    "router",
-    "app",
-    "api"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/doughjs/dough.git"
-  },
-  "scripts": {
-    "test": "echo \"Testing...\" && exit 1"
-  }
+	"name": "@dough/dough",
+	"description": "Fast & minimalist web framework for Bun",
+	"version": "1.0.0",
+	"contributors": [
+		"Masood Zafar <masxafar@gmail.com>",
+		"Rostyslav Rudnovskiy <ruddnovskiy@gmail.com>"
+	],
+	"homepage": "https://github.com/doughjs/dough#readme",
+	"license": "MIT",
+	"keywords": ["dough", "framework", "web", "http", "rest", "router", "app", "api"],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/doughjs/dough.git"
+	},
+	"scripts": {
+		"test": "echo \"Testing...\" && exit 1",
+		"lint": "tslint lib/**/*.ts{,x} --fix && prettier --write ."
+	},
+	"devDependencies": {
+		"prettier": "2.7.1",
+		"tslint": "^6.1.3",
+		"typescript": "^4.7.4"
+	}
 }

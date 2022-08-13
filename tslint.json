@@ -1,0 +1,53 @@
+{
+	"extends": "tslint:recommended",
+	"rules": {
+		"max-line-length": {
+			"options": [120]
+		},
+		"new-parens": true,
+		"no-arg": true,
+		"no-bitwise": true,
+		"no-conditional-assignment": true,
+		"no-consecutive-blank-lines": false,
+		"no-for-in": true,
+		"prefer-for-of": true,
+		"curly": true,
+		"no-duplicate-variable": true,
+		"no-duplicate-switch-case": {
+			"severity": "error"
+		},
+		"no-empty": {
+			"options": ["allow-empty-catch", "allow-empty-functions"],
+			"severity": "warning"
+		},
+		"no-var-keyword": {
+			"severity": "error"
+		},
+		"no-duplicate-imports": {
+			"severity": "error"
+		},
+		"import-spacing": true,
+		"no-console": {
+			"severity": "error",
+			"options": ["log, console"]
+		},
+		"prefer-template": true,
+		"array-type": true,
+		"no-parameter-reassignment": true,
+		"no-trailing-whitespace": true,
+		"typedef-whitespace": true,
+		"whitespace": {
+			"options": ["check-type", "check-branch", "check-operator", "check-module"]
+		},
+		"space-before-function-paren": false,
+		"align": {
+			"options": ["statements", "elements"]
+		},
+		"semicolon": true,
+		"trailing-comma": true,
+		"arrow-return-shorthand": {
+			"options": "multiline"
+		},
+		"no-implicit-dependencies": true
+	}
+}
