@@ -23,7 +23,7 @@
 		"url": "git+https://github.com/doughjs/dough.git"
 	},
 	"scripts": {
-		"test": "echo \"Testing...\" && exit 1",
+		"test": "echo \"Testing...\" && exit 1"
 	},
 	"devDependencies": {
 		"eslint": "^8.22.0",
