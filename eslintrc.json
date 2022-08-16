@@ -1,0 +1,137 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "import/order": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-console": 0,
+    "no-template-curly-in-string": 0,
+    "no-unreachable": 2,
+    "array-callback-return": 1,
+    "class-methods-use-this": 0,
+    "consistent-return": 0,
+    "default-case": 2,
+    "default-case-last": 2,
+    "no-alert": 0,
+    "no-eq-null": 2,
+    "no-multi-spaces": [
+      "error",
+      {
+        "exceptions": {
+          "ImportDeclaration": true
+        }
+      }
+    ],
+    "no-param-reassign": 0,
+    "no-unused-expressions": 0,
+    "no-void": 0,
+    "radix": [
+      1,
+      "as-needed"
+    ],
+    "wrap-iife": 1,
+    "no-delete-var": 1,
+    "no-restricted-globals": 0,
+    "no-shadow": 0,
+    "no-use-before-define": 0,
+    "array-bracket-spacing": [
+      2,
+      "always",
+      {
+        "objectsInArrays": false,
+        "arraysInArrays": false
+      }
+    ],
+    "comma-dangle": [
+      2,
+      {
+        "imports": "never",
+        "exports": "never",
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "computed-property-spacing": [
+      2,
+      "always"
+    ],
+    "func-style": [
+      2,
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "indent": [
+      1,
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "key-spacing": [
+      2,
+      {
+        "beforeColon": false,
+        "afterColon": true,
+        "align": "value"
+      }
+    ],
+    "max-len": [
+      1,
+      {
+        "tabWidth": 4,
+        "code": 100,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-plusplus": 0,
+    "no-restricted-syntax": [
+      2,
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "arrow-body-style": 0,
+    "arrow-parens": [
+      2,
+      "as-needed"
+    ],
+    "prefer-const": 1
+  }
+}
