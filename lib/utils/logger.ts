@@ -14,4 +14,11 @@ export const Colors: ColorList = {
     white:   [ 37, 39 ],
     gray:    [ 90, 39 ],
     grey:    [ 90, 39 ],
-}
+};
+
+/**
+ * Custom Date format option object to store date formatting options.
+ */
+export const DateFormatOptions: Intl.DateTimeFormatOptions = {
+    timeZone: 'UTC',
+};
