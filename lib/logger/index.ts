@@ -1,58 +1,74 @@
-// Types
-type ColorItem = [number, number]
-type ColorList = {
- [key: string]: ColorItem
-}
+import { ColorItem } from '../interfaces/logger';
+import { Colors, DateFormatOptions } from '../utils/logger';
 
-export const colorList: ColorList = {
-    black:   [ 30, 39 ],
-    red:     [ 31, 39 ],
-    green:   [ 32, 39 ],
-    yellow:  [ 33, 39 ],
-    blue:    [ 34, 39 ],
-    magenta: [ 35, 39 ],
-    cyan:    [ 36, 39 ],
-    white:   [ 37, 39 ],
-    gray:    [ 90, 39 ],
-    grey:    [ 90, 39 ],
-}
+export default class Logger {
+    /**
+     * Private field to store error ColorItem.
+     */
+    private readonly errorColor: ColorItem;
 
+    /**
+     * Private field to store info ColorItem.
+     */
+    private readonly infoColor: ColorItem;
 
-export class Logger {
-    private errColor: ColorItem;
+    /**
+     * Private field to store log ColorItem.
+     */
+    private readonly logColor: ColorItem;
 
-    private infoColor: ColorItem;
-
-    private logColor: ColorItem;
-
+    /**
+     * Private field to store number of indentations.
+     */
     spaces: number;
 
-    constructor(errColor = colorList.red, infoColor = colorList.blue, logColor = colorList.green, spaces = 10) {
-        this.errColor = errColor
-        this.infoColor = infoColor
-        this.logColor = logColor
-        this.spaces = spaces
+    /**
+     * Class constructor to initialize private fields.
+     */
+    constructor(
+        errorColor: ColorItem = Colors.red,
+        infoColor: ColorItem = Colors.blue,
+        logColor: ColorItem = Colors.green,
+        spaces = 10,
+    ) {
+        this.errorColor = errorColor;
+        this.infoColor = infoColor;
+        this.logColor = logColor;
+        this.spaces = spaces;
     }
 
+    /**
+     * Method to log the error to standard error.
+     *
+     * @param msg - The error message.
+     * @param err - The error.
+     */
     error(msg = '', err) {
         if (typeof msg !== 'string') {
-            throw new TypeError('MSG is not of type string')
+            throw new TypeError('Message is not of type string')
         }
-        console.log(`${'\x1b['}${this.errColor[ 0 ]}${'m'}${msg}${err}${'\x1b['}${this.errColor[ 1 ]}${'m'}`)
+        console.error(`\x1b[${this.errorColor[ 0 ]}m${msg}${err}\x1b[${this.errorColor[ 1 ]}m`);
     }
 
+    /**
+     * Method to log the custom error message to console with additional info.
+     *
+     * @param msg - The error message.
+     */
     info(msg) {
         let spaces = '';
         for (let i = 1; i <= this.spaces; i++) {
             spaces = spaces + ' '
         }
-        console.info(`${'\x1b['}${this.infoColor[ 0 ]}${'m'}[${new Date().toLocaleString('en-US', { timezone: 'UTC' })}]${spaces}${msg}${'\x1b['}${this.infoColor[ 1 ]}${'m'}`)
+        console.info(`\x1b[${this.infoColor[ 0 ]}m[${new Date().toLocaleString('en-US', DateFormatOptions)}]${spaces}${msg}\x1b[${this.infoColor[ 1 ]}m`);
     }
 
-
+    /**
+     * Method to log the custom error message to console.
+     *
+     * @param msg - The error message.
+     */
     log(msg) {
-        console.log(`${'\x1b['}${this.logColor[ 0 ]}${'m'}${msg}${'\x1b['}${this.logColor[ 1 ]}${'m'}`)
+        console.log(`\x1b[${this.logColor[ 0 ]}m${msg}\x1b[${this.logColor[ 1 ]}m`);
     }
 }
-
-export default Logger

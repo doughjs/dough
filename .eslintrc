@@ -19,6 +19,7 @@
     "import/order": 0,
     "import/no-extraneous-dependencies": 0,
     "no-console": 0,
+    "no-new": 0,
     "no-template-curly-in-string": 0,
     "no-unreachable": 2,
     "array-callback-return": 1,
