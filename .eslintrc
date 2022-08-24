@@ -6,8 +6,7 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended",
-    "airbnb"
+    "eslint:recommended"
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": 0,
