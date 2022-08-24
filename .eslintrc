@@ -6,7 +6,9 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": 0,
